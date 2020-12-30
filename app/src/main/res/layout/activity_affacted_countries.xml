@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_two"
+    tools:context=".AffactedCountries">
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:paddingLeft="15dp"
+        android:drawablePadding="15dp"
+        android:hint="Search Countries"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:elevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/seach_bg"
+        android:drawableStart="@drawable/ic_search"/>
+
+    <ListView
+        android:id="@+id/countryList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:elevation="20dp"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/countryProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/countryList"
+        app:layout_constraintEnd_toEndOf="@id/countryList"
+        app:layout_constraintStart_toStartOf="@id/countryList"
+        app:layout_constraintTop_toTopOf="@id/countryList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
